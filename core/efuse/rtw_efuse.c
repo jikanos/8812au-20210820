@@ -16,6 +16,7 @@
 
 #include "drv_types.h"
 #include "hal_data.h"
+#include "rtw_mp_phy_regdef.h"
 
 #include "../hal/efuse/efuse_mask.h"
 

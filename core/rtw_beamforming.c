@@ -17,6 +17,9 @@
 #include "drv_types.h"
 #include "hal_data.h"
 
+void beamforming_enter(void *dm_void, u16 sta_idx, u8 *my_mac_addr);
+void beamforming_leave(void *dm_void, u8 *RA);
+
 #ifdef CONFIG_BEAMFORMING
 
 #ifdef RTW_BEAMFORMING_VERSION_2

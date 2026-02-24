@@ -805,4 +805,8 @@ defined(CONFIG_RTL8723F) /*|| defined(CONFIG_RTL8814A)*/
 #define DBG_CPU_INFO	/* Add CPU info to debug message prefix */
 #endif
 
+#ifndef CONFIG_RTW_UP_MAPPING_RULE
+#define CONFIG_RTW_UP_MAPPING_RULE 0
+#endif
+
 #endif /* __DRV_CONF_H__ */
