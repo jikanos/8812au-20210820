@@ -15,7 +15,7 @@
 #define _RTL8812AU_RECV_C_
 
 /* #include <drv_types.h> */
-#include <rtl8812a_hal.h>
+#include "rtl8812a_hal.h"
 
 int	rtl8812au_init_recv_priv(_adapter *padapter)
 {

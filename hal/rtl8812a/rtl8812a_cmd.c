@@ -15,9 +15,9 @@
 #define _RTL8812A_CMD_C_
 
 /* #include <drv_types.h> */
-#include <rtl8812a_hal.h>
+#include "rtl8812a_hal.h"
 #include "hal_com_h2c.h"
-#include <hal_com.h>
+#include "hal_com.h"
 #define CONFIG_H2C_EF
 
 #define RTL8812_MAX_H2C_BOX_NUMS	4

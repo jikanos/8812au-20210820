@@ -14,8 +14,8 @@
  *****************************************************************************/
 #define  _IOCTL_CFG80211_C_
 
-#include <drv_types.h>
-#include <hal_data.h>
+#include "drv_types.h"
+#include "hal_data.h"
 
 #ifdef CONFIG_IOCTL_CFG80211
 

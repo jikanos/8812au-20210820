@@ -15,7 +15,7 @@
 #ifndef __USB_OSINTF_H
 #define __USB_OSINTF_H
 
-#include <usb_vendor_req.h>
+#include "usb_vendor_req.h"
 
 #define USBD_HALTED(Status) ((u32)(Status) >> 30 == 3)
 

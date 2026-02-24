@@ -14,8 +14,8 @@
  *****************************************************************************/
 #define  _RTW_SECURITY_C_
 
-#include <drv_types.h>
-#include <rtw_swcrypto.h>
+#include "drv_types.h"
+#include "rtw_swcrypto.h"
 
 static const char *_security_type_str[] = {
 	"N/A",
@@ -2869,4 +2869,3 @@ BIP_exit:
 }
 
 #endif /* CONFIG_IEEE80211W */
-

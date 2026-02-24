@@ -22,13 +22,13 @@
 #include "../hal/rtl8821c/hal8821c_fw.h"
 
 #ifdef CONFIG_USB_HCI
-#include <rtl8821cu_hal.h>
+#include "rtl8821cu_hal.h"
 #endif
 #ifdef CONFIG_SDIO_HCI
-#include <rtl8821cs_hal.h>
+#include "rtl8821cs_hal.h"
 #endif
 #ifdef CONFIG_PCI_HCI
-#include <rtl8821ce_hal.h>
+#include "rtl8821ce_hal.h"
 #endif
 
 #ifdef CONFIG_SUPPORT_TRX_SHARED

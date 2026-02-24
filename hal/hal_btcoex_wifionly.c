@@ -12,7 +12,7 @@
  * more details.
  *
  *****************************************************************************/
-#include <hal_btcoex_wifionly.h>
+#include "hal_btcoex_wifionly.h"
 
 #if (CONFIG_BTCOEX_SUPPORT_WIFI_ONLY_CFG == 1)
 

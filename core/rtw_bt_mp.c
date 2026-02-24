@@ -14,11 +14,11 @@
  *****************************************************************************/
 
 
-#include <drv_types.h>
-#include <rtw_bt_mp.h>
+#include "drv_types.h"
+#include "rtw_bt_mp.h"
 
 #if defined(CONFIG_RTL8723B)
-	#include <rtl8723b_hal.h>
+	#include "rtl8723b_hal.h"
 #endif
 
 #if defined(CONFIG_RTL8723B) || defined(CONFIG_RTL8821A)

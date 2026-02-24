@@ -31,7 +31,7 @@ enum {
 #define MAX_USB_IO_CTL_SIZE		(MAX_VENDOR_REQ_CMD_SIZE + ALIGNMENT_UNIT)
 
 #ifdef PLATFORM_LINUX
-#include <usb_ops_linux.h>
+#include "usb_ops_linux.h"
 #endif /* PLATFORM_LINUX */
 
 #ifdef CONFIG_RTL8188E

@@ -15,7 +15,7 @@
 #ifndef _RTL8703B_SRESET_H_
 #define _RTL8703B_SRESET_H_
 
-#include <rtw_sreset.h>
+#include "rtw_sreset.h"
 
 #ifdef DBG_CONFIG_ERROR_DETECT
 	extern void rtl8703b_sreset_xmit_status_check(_adapter *padapter);

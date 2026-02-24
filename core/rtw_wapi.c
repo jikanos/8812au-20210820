@@ -16,8 +16,8 @@
 
 #include <linux/unistd.h>
 #include <linux/etherdevice.h>
-#include <drv_types.h>
-#include <rtw_wapi.h>
+#include "drv_types.h"
+#include "rtw_wapi.h"
 
 
 u32 wapi_debug_component =

@@ -231,9 +231,9 @@ void rtl8814b_mp_config_rfpath(PADAPTER);			/* hal_mp.c */
 void hw_var_set_dl_rsvd_page(PADAPTER adapter, u8 mstatus);
 
 #ifdef CONFIG_USB_HCI
-#include <rtl8814bu_hal.h>
+#include "rtl8814bu_hal.h"
 #elif defined(CONFIG_PCI_HCI)
-#include <rtl8814be_hal.h>
+#include "rtl8814be_hal.h"
 #endif
 
 #endif /* _RTL8814B_HAL_H_ */

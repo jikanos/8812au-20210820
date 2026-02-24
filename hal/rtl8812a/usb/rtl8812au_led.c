@@ -15,7 +15,7 @@
 #define _RTL8812AU_LED_C_
 
 /* #include <drv_types.h> */
-#include <rtl8812a_hal.h>
+#include "rtl8812a_hal.h"
 #ifdef CONFIG_RTW_SW_LED
 
 /* ********************************************************************************

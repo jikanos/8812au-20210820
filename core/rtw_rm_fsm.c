@@ -13,8 +13,8 @@
  *
  *****************************************************************************/
 
-#include <drv_types.h>
-#include <hal_data.h>
+#include "drv_types.h"
+#include "hal_data.h"
 #ifdef CONFIG_RTW_80211K
 #include "rtw_rm_fsm.h"
 #include "rtw_rm_util.h"

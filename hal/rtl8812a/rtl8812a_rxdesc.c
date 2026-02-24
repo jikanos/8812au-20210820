@@ -15,7 +15,7 @@
 #define _RTL8812A_RXDESC_C_
 
 /* #include <drv_types.h> */
-#include <rtl8812a_hal.h>
+#include "rtl8812a_hal.h"
 
 void rtl8812_query_rx_desc_status(union recv_frame *precvframe, u8 *pdesc)
 {

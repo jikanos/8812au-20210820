@@ -15,8 +15,8 @@
 #ifndef __HALBTC_WIFIONLY_H__
 #define __HALBTC_WIFIONLY_H__
 
-#include <drv_types.h>
-#include <hal_data.h>
+#include "drv_types.h"
+#include "hal_data.h"
 
 /* Define the ICs that support wifi only cfg in coex. codes */
 #if defined(CONFIG_RTL8723B) || defined(CONFIG_RTL8822B) || defined(CONFIG_RTL8821C) || defined(CONFIG_RTL8822C) || defined(CONFIG_RTL8814B) \

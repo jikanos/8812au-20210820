@@ -36,7 +36,7 @@
  */
 
 #ifdef CONFIG_SDIO_HCI
-#include <rtw_sdio.h>
+#include "rtw_sdio.h"
 
 static u8 _halmac_mac_reg_page0_chk(const char *func, struct dvobj_priv *dvobj, u32 offset)
 {

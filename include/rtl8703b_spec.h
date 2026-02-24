@@ -15,7 +15,7 @@
 #ifndef __RTL8703B_SPEC_H__
 #define __RTL8703B_SPEC_H__
 
-#include <drv_conf.h>
+#include "drv_conf.h"
 
 
 #define HAL_NAV_UPPER_UNIT_8703B		128		/* micro-second */

@@ -15,7 +15,7 @@
 #define _RTL8812A_HAL_INIT_C_
 
 /* #include <drv_types.h> */
-#include <rtl8812a_hal.h>
+#include "rtl8812a_hal.h"
 #ifdef CONFIG_RTL8812A
 #include "hal8812a_fw.h"
 #else

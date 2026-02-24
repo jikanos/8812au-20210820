@@ -15,6 +15,7 @@
 #ifndef _RTL871X_BYTEORDER_H_
 #define _RTL871X_BYTEORDER_H_
 
+#include <asm/byteorder.h>
 
 #if defined(CONFIG_LITTLE_ENDIAN) && defined (CONFIG_BIG_ENDIAN)
 	#error "Shall be CONFIG_LITTLE_ENDIAN or CONFIG_BIG_ENDIAN, but not both!\n"
@@ -27,7 +28,23 @@
 #elif defined (CONFIG_BIG_ENDIAN)
 	#include <byteorder/big_endian.h>
 #else
-	#  error "Must be LITTLE/BIG Endian Host"
+	#if defined(__BYTE_ORDER) && defined(__LITTLE_ENDIAN) && defined(__BIG_ENDIAN)
+		#if __BYTE_ORDER == __LITTLE_ENDIAN
+			#define CONFIG_LITTLE_ENDIAN 1
+		#elif __BYTE_ORDER == __BIG_ENDIAN
+			#define CONFIG_BIG_ENDIAN 1
+		#else
+			#error "Must be LITTLE/BIG Endian Host"
+		#endif
+	#elif defined(__LITTLE_ENDIAN) || defined(__BIG_ENDIAN)
+		#if defined(__LITTLE_ENDIAN)
+			#define CONFIG_LITTLE_ENDIAN 1
+		#else
+			#define CONFIG_BIG_ENDIAN 1
+		#endif
+	#else
+		#error "Must be LITTLE/BIG Endian Host"
+	#endif
 #endif
 
 #endif /* _RTL871X_BYTEORDER_H_ */

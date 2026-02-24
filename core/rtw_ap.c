@@ -14,8 +14,8 @@
  *****************************************************************************/
 #define _RTW_AP_C_
 
-#include <drv_types.h>
-#include <hal_data.h>
+#include "drv_types.h"
+#include "hal_data.h"
 
 #ifdef CONFIG_AP_MODE
 

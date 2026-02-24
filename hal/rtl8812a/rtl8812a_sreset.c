@@ -15,7 +15,7 @@
 #define _RTL8812A_SRESET_C_
 
 /* #include <drv_types.h> */
-#include <rtl8812a_hal.h>
+#include "rtl8812a_hal.h"
 
 #ifdef DBG_CONFIG_ERROR_DETECT
 void rtl8812_sreset_xmit_status_check(_adapter *padapter)

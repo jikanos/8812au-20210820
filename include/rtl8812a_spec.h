@@ -15,7 +15,7 @@
 #ifndef __RTL8812A_SPEC_H__
 #define __RTL8812A_SPEC_H__
 
-#include <drv_conf.h>
+#include "drv_conf.h"
 
 
 /* ************************************************************

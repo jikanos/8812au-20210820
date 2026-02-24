@@ -28,6 +28,8 @@ If you want to change this file please make sure notify all driver teams maintai
 
 /*--------------------Define ---------------------------------------*/
 
+#include "rtw_bb_path.h"
+
 #define STA_DM_CTRL_ACTIVE			BIT(0)
 #define STA_DM_CTRL_CFO_TRACKING	BIT(1)
 
@@ -94,29 +96,6 @@ enum rf_type {
 	RF_1T4R			= 14,
 	RF_1T3R			= 15,
 	RF_TYPE_MAX,
-};
-
-enum bb_path {
-	BB_PATH_NON = 0,
-	BB_PATH_A = 0x00000001,
-	BB_PATH_B = 0x00000002,
-	BB_PATH_C = 0x00000004,
-	BB_PATH_D = 0x00000008,
-
-	BB_PATH_AB = (BB_PATH_A | BB_PATH_B),
-	BB_PATH_AC = (BB_PATH_A | BB_PATH_C),
-	BB_PATH_AD = (BB_PATH_A | BB_PATH_D),
-	BB_PATH_BC = (BB_PATH_B | BB_PATH_C),
-	BB_PATH_BD = (BB_PATH_B | BB_PATH_D),
-	BB_PATH_CD = (BB_PATH_C | BB_PATH_D),
-
-	BB_PATH_ABC = (BB_PATH_A | BB_PATH_B | BB_PATH_C),
-	BB_PATH_ABD = (BB_PATH_A | BB_PATH_B | BB_PATH_D),
-	BB_PATH_ACD = (BB_PATH_A | BB_PATH_C | BB_PATH_D),
-	BB_PATH_BCD = (BB_PATH_B | BB_PATH_C | BB_PATH_D),
-
-	BB_PATH_ABCD = (BB_PATH_A | BB_PATH_B | BB_PATH_C | BB_PATH_D),
-	BB_PATH_AUTO = 0xff /*for path diversity*/
 };
 
 enum rf_path {

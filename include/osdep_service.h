@@ -42,7 +42,7 @@
 
 
 #ifdef PLATFORM_FREEBSD
-	#include <osdep_service_bsd.h>
+	#include "osdep_service_bsd.h"
 #endif
 
 #ifdef PLATFORM_LINUX
@@ -51,18 +51,18 @@
 	#include <linux/sched/signal.h>
 	#include <linux/sched/types.h>
 #endif
-	#include <osdep_service_linux.h>
-	#include <drv_types_linux.h>
+	#include "osdep_service_linux.h"
+	#include "drv_types_linux.h"
 #endif
 
 #ifdef PLATFORM_OS_XP
-	#include <osdep_service_xp.h>
-	#include <drv_types_xp.h>
+	#include "osdep_service_xp.h"
+	#include "drv_types_xp.h"
 #endif
 
 #ifdef PLATFORM_OS_CE
-	#include <osdep_service_ce.h>
-	#include <drv_types_ce.h>
+	#include "osdep_service_ce.h"
+	#include "drv_types_ce.h"
 #endif
 
 /* #include <rtw_byteorder.h> */

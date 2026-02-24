@@ -15,8 +15,8 @@
 #ifndef __CUSTOM_GPIO_H__
 #define __CUSTOM_GPIO_H___
 
-#include <drv_conf.h>
-#include <osdep_service.h>
+#include "drv_conf.h"
+#include "osdep_service.h"
 
 typedef enum cust_gpio_modes {
 	WLAN_PWDN_ON,

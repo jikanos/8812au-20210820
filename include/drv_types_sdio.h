@@ -24,7 +24,7 @@
 
 	#ifdef CONFIG_PLATFORM_SPRD
 		#include <linux/gpio.h>
-		#include <custom_gpio.h>
+		#include "custom_gpio.h"
 	#endif /* CONFIG_PLATFORM_SPRD */
 #endif
 

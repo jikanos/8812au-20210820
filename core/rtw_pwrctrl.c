@@ -14,9 +14,9 @@
  *****************************************************************************/
 #define _RTW_PWRCTRL_C_
 
-#include <drv_types.h>
-#include <hal_data.h>
-#include <hal_com_h2c.h>
+#include "drv_types.h"
+#include "hal_data.h"
+#include "hal_com_h2c.h"
 
 #ifdef DBG_CHECK_FW_PS_STATE
 int rtw_fw_ps_state(PADAPTER padapter)

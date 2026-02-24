@@ -13,8 +13,8 @@
  *
  *****************************************************************************/
 
-#include <drv_types.h>
-#include <hal_data.h>
+#include "drv_types.h"
+#include "hal_data.h"
 #ifdef CONFIG_RTW_SW_LED
 
 /*

@@ -79,8 +79,8 @@
 	#define __PACK
 	#define __WLAN_ATTRIB_PACK__
 #elif (DM_ODM_SUPPORT_TYPE == ODM_IOT)
-	#include <drv_types.h>
-	#include <wifi.h>
+	#include "drv_types.h"
+	#include "wifi.h"
 	#define	ODM_ENDIAN_TYPE				ODM_ENDIAN_LITTLE
 	#define __PACK
 #endif
@@ -520,7 +520,7 @@ rtw_phydm_cfg_phy_para(
 	#include "rtl8721d/version_rtl8721d.h"
 	#include "rtl8721d/phydm_rtl8721d.h"
 	#include "rtl8721d/hal8721dreg.h"
-	#include <hal_data.h>
+	#include "hal_data.h"
 	#if 0
 	#if (DM_ODM_SUPPORT_TYPE == ODM_AP)
 	#endif
@@ -587,9 +587,9 @@ rtw_phydm_cfg_phy_para(
 	#include "halrf/rtl8822c/version_rtl8822c_rf.h"
 	#if (DM_ODM_SUPPORT_TYPE == ODM_CE)
 	/* @struct HAL_DATA_TYPE */
-	#include <hal_data.h>
+	#include "hal_data.h"
 	/* @RX_SMOOTH_FACTOR, reg definition and etc.*/
-	#include <rtl8822c_hal.h>
+	#include "rtl8822c_hal.h"
 	#endif
 #endif
 #if (RTL8814B_SUPPORT == 1)
@@ -644,9 +644,9 @@ rtw_phydm_cfg_phy_para(
 	#include "rtl8723f/phydm_rtl8723f.h"
 	#if (DM_ODM_SUPPORT_TYPE == ODM_CE)
 	/* @struct HAL_DATA_TYPE */
-	#include <hal_data.h>
+	#include "hal_data.h"
 	/* @RX_SMOOTH_FACTOR, reg definition and etc.*/
-	#include <rtl8723f_hal.h>
+	#include "rtl8723f_hal.h"
 	#endif
 #endif
 #endif /* @__ODM_PRECOMP_H__ */

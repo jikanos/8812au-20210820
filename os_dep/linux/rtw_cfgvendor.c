@@ -13,7 +13,7 @@
  *
  *****************************************************************************/
 
-#include <drv_types.h>
+#include "drv_types.h"
 
 #ifdef CONFIG_IOCTL_CFG80211
 
@@ -248,7 +248,7 @@ static int rtw_cfgvendor_send_cmd_reply(struct wiphy *wiphy,
 
 #define MAX_FEATURE_SET_CONCURRRENT_GROUPS  3
 
-#include <hal_data.h>
+#include "hal_data.h"
 int rtw_dev_get_feature_set(struct net_device *dev)
 {
 	_adapter *adapter = (_adapter *)rtw_netdev_priv(dev);

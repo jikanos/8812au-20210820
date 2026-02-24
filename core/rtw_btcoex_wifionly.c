@@ -12,9 +12,9 @@
  * more details.
  *
  *****************************************************************************/
-#include <drv_types.h>
-#include <hal_btcoex_wifionly.h>
-#include <hal_data.h>
+#include "drv_types.h"
+#include "hal_btcoex_wifionly.h"
+#include "hal_data.h"
 
 void rtw_btcoex_wifionly_switchband_notify(PADAPTER padapter)
 {

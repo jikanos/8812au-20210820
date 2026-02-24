@@ -16,7 +16,7 @@
 #define _RTW_EVENT_H_
 
 #ifdef CONFIG_H2CLBK
-	#include <h2clbk.h>
+	#include "h2clbk.h"
 #endif
 
 /*

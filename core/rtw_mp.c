@@ -13,14 +13,14 @@
  *
  *****************************************************************************/
 #define _RTW_MP_C_
-#include <drv_types.h>
+#include "drv_types.h"
 #ifdef PLATFORM_FREEBSD
 	#include <sys/unistd.h>		/* for RFHIGHPID */
 #endif
 
 #include "../hal/phydm/phydm_precomp.h"
 #if defined(CONFIG_RTL8723B) || defined(CONFIG_RTL8821A)
-	#include <rtw_bt_mp.h>
+	#include "rtw_bt_mp.h"
 #endif
 
 #ifdef CONFIG_MP_VHT_HW_TX_MODE

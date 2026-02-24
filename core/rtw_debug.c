@@ -14,8 +14,8 @@
  *****************************************************************************/
 #define _RTW_DEBUG_C_
 
-#include <drv_types.h>
-#include <hal_data.h>
+#include "drv_types.h"
+#include "hal_data.h"
 
 #ifdef CONFIG_RTW_DEBUG
 const char *rtw_log_level_str[] = {
@@ -33,7 +33,7 @@ const char *rtw_log_level_str[] = {
 	u64 GlobalDebugComponents = 0;
 #endif /* CONFIG_DEBUG_RTL871X */
 
-#include <rtw_version.h>
+#include "rtw_version.h"
 
 #ifdef CONFIG_TDLS
 	#define TDLS_DBG_INFO_SPACE_BTWN_ITEM_AND_VALUE	41
@@ -6816,7 +6816,7 @@ ssize_t proc_set_xmit_block(struct file *file, const char __user *buffer, size_t
 }
 #endif
 
-#include <hal_data.h>
+#include "hal_data.h"
 int proc_get_efuse_map(struct seq_file *m, void *v)
 {
 	struct net_device *dev = m->private;

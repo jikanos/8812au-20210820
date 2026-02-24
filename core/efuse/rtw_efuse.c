@@ -14,8 +14,9 @@
  *****************************************************************************/
 #define _RTW_EFUSE_C_
 
-#include <drv_types.h>
-#include <hal_data.h>
+#include "drv_types.h"
+#include "hal_data.h"
+#include "rtw_mp_phy_regdef.h"
 
 #include "../hal/efuse/efuse_mask.h"
 

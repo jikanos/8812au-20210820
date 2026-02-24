@@ -15,7 +15,7 @@
 #define _HCI_HAL_INIT_C_
 
 /* #include <drv_types.h> */
-#include <rtl8812a_hal.h>
+#include "rtl8812a_hal.h"
 
 #ifndef CONFIG_USB_HCI
 

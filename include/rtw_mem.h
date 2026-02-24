@@ -15,9 +15,9 @@
 #ifndef __RTW_MEM_H__
 #define __RTW_MEM_H__
 
-#include <drv_conf.h>
-#include <basic_types.h>
-#include <osdep_service.h>
+#include "drv_conf.h"
+#include "basic_types.h"
+#include "osdep_service.h"
 
 u16 rtw_rtkm_get_buff_size(void);
 u8 rtw_rtkm_get_nr_recv_skb(void);

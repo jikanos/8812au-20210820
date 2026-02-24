@@ -13,8 +13,8 @@
  *
  *****************************************************************************/
 
-#include <drv_types.h>
-#include <hal_data.h>
+#include "drv_types.h"
+#include "hal_data.h"
 
 /* A mapping from HalData to ODM. */
 enum odm_board_type boardType(u8 InterfaceSel)

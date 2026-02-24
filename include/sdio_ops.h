@@ -22,7 +22,7 @@
 #define SDIO_ERR_VAL32	0xFFFFFFFF
 
 #ifdef PLATFORM_LINUX
-#include <sdio_ops_linux.h>
+#include "sdio_ops_linux.h"
 #endif
 
 extern void sdio_set_intf_ops(_adapter *padapter, struct _io_ops *pops);

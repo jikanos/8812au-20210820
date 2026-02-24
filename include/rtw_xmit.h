@@ -1070,6 +1070,6 @@ bool rtw_is_xmit_blocked(_adapter *padapter);
 void rtw_hci_flush(_adapter *padapter);
 
 /* include after declaring struct xmit_buf, in order to avoid warning */
-#include <xmit_osdep.h>
+#include "xmit_osdep.h"
 
 #endif /* _RTL871X_XMIT_H_ */
