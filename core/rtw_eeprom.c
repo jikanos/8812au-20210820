@@ -14,9 +14,9 @@
  *****************************************************************************/
 #define _RTW_EEPROM_C_
 
-#include <drv_conf.h>
-#include <osdep_service.h>
-#include <drv_types.h>
+#include "drv_conf.h"
+#include "osdep_service.h"
+#include "drv_types.h"
 
 void up_clk(_adapter	*padapter,	 u16 *x)
 {

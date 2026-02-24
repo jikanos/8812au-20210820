@@ -26,6 +26,11 @@
 #ifndef __PHYDMPREDEFINE_H__
 #define __PHYDMPREDEFINE_H__
 
+#include <linux/bitops.h>
+#ifndef BIT
+#define BIT(nr) (1UL << (nr))
+#endif
+
 /****************************************************************
  * 1 ============================================================
  * 1  Definition
@@ -80,6 +85,9 @@
 #define PHYDM_MAX_RF_PATH		4
 
 /* number of entry */
+#ifndef ASSOCIATE_ENTRY_NUM
+#define ASSOCIATE_ENTRY_NUM 32
+#endif
 #if (DM_ODM_SUPPORT_TYPE & (ODM_CE))
 	#ifdef DM_ODM_CE_MAC80211
 		/* @defined in wifi.h (32+1) */

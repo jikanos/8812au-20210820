@@ -27,7 +27,7 @@
 	#include <mach/board.h>
 	#include <mach/hardware.h>
 	#include <mach/irqs.h>
-	#include <custom_gpio.h>
+	#include "custom_gpio.h"
 #endif
 
 

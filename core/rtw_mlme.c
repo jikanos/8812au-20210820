@@ -14,7 +14,7 @@
  *****************************************************************************/
 #define _RTW_MLME_C_
 
-#include <hal_data.h>
+#include "hal_data.h"
 #ifdef CONFIG_PLATFORM_CMAP_INTFS
 #include "../os_dep/linux/custom_multiap_intfs/custom_multiap_intfs.h"
 #endif
@@ -5981,4 +5981,3 @@ void dump_arp_pkt(void *sel, u8 *da, u8 *sa, u8 *arp, bool tx)
 	RTW_PRINT_SEL(sel, "tha="MAC_FMT", tpa="IP_FMT"\n"
 		, MAC_ARG(ARP_TARGET_MAC_ADDR(arp)), IP_ARG(ARP_TARGET_IP_ADDR(arp)));
 }
-

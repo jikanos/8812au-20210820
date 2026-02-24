@@ -14,7 +14,7 @@
  *****************************************************************************/
 
 #include "Hal8812PwrSeq.h"
-#include <rtl8812a_hal.h>
+#include "rtl8812a_hal.h"
 
 /*
     drivers should parse below arrays and do the corresponding actions

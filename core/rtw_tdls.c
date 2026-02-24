@@ -14,8 +14,8 @@
  *****************************************************************************/
 #define _RTW_TDLS_C_
 
-#include <drv_types.h>
-#include <hal_data.h>
+#include "drv_types.h"
+#include "hal_data.h"
 
 #ifdef CONFIG_TDLS
 #define ONE_SEC 	1000 /* 1000 ms */

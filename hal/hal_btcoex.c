@@ -16,8 +16,8 @@
 
 #ifdef CONFIG_BT_COEXIST
 
-#include <hal_data.h>
-#include <hal_btcoex.h>
+#include "hal_data.h"
+#include "hal_btcoex.h"
 #include "btc/mp_precomp.h"
 
 /* ************************************

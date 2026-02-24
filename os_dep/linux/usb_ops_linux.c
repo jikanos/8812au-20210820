@@ -14,9 +14,9 @@
  *****************************************************************************/
 #define _USB_OPS_LINUX_C_
 
-#include <drv_types.h>
-#include <hal_data.h>
-#include <rtw_sreset.h>
+#include "drv_types.h"
+#include "hal_data.h"
+#include "rtw_sreset.h"
 
 struct rtw_async_write_data {
 	u8 data[VENDOR_CMD_MAX_DATA_LEN];

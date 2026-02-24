@@ -12,13 +12,13 @@
  * more details.
  *
  *****************************************************************************/
-#include <drv_types.h>
-#include <hal_data.h>
-#include <aes.h>
-#include <aes_siv.h>
-#include <aes_wrap.h>
-#include <sha256.h>
-#include <wlancrypto_wrap.h>
+#include "drv_types.h"
+#include "hal_data.h"
+#include "aes.h"
+#include "aes_siv.h"
+#include "aes_wrap.h"
+#include "sha256.h"
+#include "wlancrypto_wrap.h"
 
 /**
  * rtw_ccmp_encrypt - 

@@ -15,8 +15,8 @@
 
 #define _HAL_INTF_C_
 
-#include <drv_types.h>
-#include <hal_data.h>
+#include "drv_types.h"
+#include "hal_data.h"
 
 const u32 _chip_type_to_odm_ic_type[] = {
 	0,

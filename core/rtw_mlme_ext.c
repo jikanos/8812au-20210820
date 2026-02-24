@@ -14,8 +14,8 @@
  *****************************************************************************/
 #define _RTW_MLME_EXT_C_
 
-#include <drv_types.h>
-#include <hal_data.h>
+#include "drv_types.h"
+#include "hal_data.h"
 
 struct mlme_handler mlme_sta_tbl[] = {
 	{WIFI_ASSOCREQ,		"OnAssocReq",	&OnAssocReq},

@@ -25,6 +25,11 @@
 #ifndef __ODM_TYPES_H__
 #define __ODM_TYPES_H__
 
+#ifndef __RTW_BOOLEAN_DEFINED__
+#define __RTW_BOOLEAN_DEFINED__
+typedef unsigned char boolean;
+#endif
+
 /*Define Different SW team support*/
 #define	ODM_AP			0x01	/*BIT(0)*/
 #define	ODM_CE			0x04	/*BIT(2)*/
@@ -32,6 +37,10 @@
 #define	ODM_ADSL		0x10
 /*BIT(4)*/		/*already combine with ODM_AP, and is nouse now*/
 #define	ODM_IOT		0x20	/*BIT(5)*/
+
+#ifndef DM_ODM_SUPPORT_TYPE
+#define DM_ODM_SUPPORT_TYPE ODM_CE
+#endif
 
 /*For FW API*/
 #define	__iram_odm_func__
@@ -254,7 +263,7 @@ enum rt_spinlock_type {
 	#define	phydm_timer_list	timer_list
 
 #elif (DM_ODM_SUPPORT_TYPE == ODM_CE)
-	#include <drv_types.h>
+	#include "drv_types.h"
 
 	#ifdef CONFIG_USB_HCI
 		#define DEV_BUS_TYPE	RT_USB_INTERFACE

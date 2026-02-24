@@ -15,7 +15,7 @@
 #ifndef __RTL8192E_SPEC_H__
 #define __RTL8192E_SPEC_H__
 
-#include <drv_conf.h>
+#include "drv_conf.h"
 
 #define HAL_NAV_UPPER_UNIT_8192E		128		/* micro-second */
 

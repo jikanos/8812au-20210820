@@ -237,9 +237,9 @@ void rtl8723f_mp_config_rfpath(PADAPTER);			/* hal_mp.c */
 void hw_var_set_dl_rsvd_page(PADAPTER adapter, u8 mstatus);
 
 #ifdef CONFIG_USB_HCI
-#include <rtl8723fu_hal.h>
+#include "rtl8723fu_hal.h"
 #elif defined(CONFIG_SDIO_HCI)
-#include <rtl8723fs_hal.h>
+#include "rtl8723fs_hal.h"
 #endif
 
 #endif /* _RTL8723F_HAL_H_ */

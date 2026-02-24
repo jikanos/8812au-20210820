@@ -15,7 +15,7 @@
 #define _RTL8812A_XMIT_C_
 
 /* #include <drv_types.h> */
-#include <rtl8812a_hal.h>
+#include "rtl8812a_hal.h"
 
 void _dbg_dump_tx_info(_adapter	*padapter, int frame_tag, u8 *ptxdesc)
 {

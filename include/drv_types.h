@@ -22,28 +22,28 @@
 #ifndef __DRV_TYPES_H__
 #define __DRV_TYPES_H__
 
-#include <drv_conf.h>
-#include <basic_types.h>
-#include <osdep_service.h>
-#include <rtw_byteorder.h>
-#include <wlan_bssdef.h>
-#include <wifi.h>
-#include <ieee80211.h>
+#include "drv_conf.h"
+#include "basic_types.h"
+#include "osdep_service.h"
+#include "rtw_byteorder.h"
+#include "wlan_bssdef.h"
+#include "wifi.h"
+#include "ieee80211.h"
 #ifdef CONFIG_ARP_KEEP_ALIVE
 	#include <net/neighbour.h>
 	#include <net/arp.h>
 #endif
 
 #ifdef PLATFORM_OS_XP
-	#include <drv_types_xp.h>
+	#include "drv_types_xp.h"
 #endif
 
 #ifdef PLATFORM_OS_CE
-	#include <drv_types_ce.h>
+	#include "drv_types_ce.h"
 #endif
 
 #ifdef PLATFORM_LINUX
-	#include <drv_types_linux.h>
+	#include "drv_types_linux.h"
 #endif
 
 enum _NIC_VERSION {
@@ -57,63 +57,63 @@ enum _NIC_VERSION {
 
 typedef struct _ADAPTER _adapter, ADAPTER, *PADAPTER;
 
-#include <rtw_debug.h>
-#include <cmn_info/rtw_sta_info.h>
-#include <rtw_rf.h>
+#include "rtw_debug.h"
+#include "cmn_info/rtw_sta_info.h"
+#include "rtw_rf.h"
 #include "../core/rtw_chplan.h"
 
 #ifdef CONFIG_80211N_HT
-	#include <rtw_ht.h>
+	#include "rtw_ht.h"
 #endif
 
 #ifdef CONFIG_80211AC_VHT
-	#include <rtw_vht.h>
+	#include "rtw_vht.h"
 #endif
 
-#include <rtw_cmd.h>
-#include <cmd_osdep.h>
-#include <rtw_security.h>
-#include <rtw_xmit.h>
-#include <xmit_osdep.h>
-#include <rtw_recv.h>
-#include <rtw_rm.h>
+#include "rtw_cmd.h"
+#include "cmd_osdep.h"
+#include "rtw_security.h"
+#include "rtw_xmit.h"
+#include "xmit_osdep.h"
+#include "rtw_recv.h"
+#include "rtw_rm.h"
 
 #ifdef CONFIG_BEAMFORMING
-	#include <rtw_beamforming.h>
+	#include "rtw_beamforming.h"
 #endif
 
-#include <recv_osdep.h>
-#include <rtw_efuse.h>
-#include <rtw_sreset.h>
-#include <hal_intf.h>
-#include <hal_com.h>
-#include<hal_com_h2c.h>
-#include <hal_com_led.h>
+#include "recv_osdep.h"
+#include "rtw_efuse.h"
+#include "rtw_sreset.h"
+#include "hal_intf.h"
+#include "hal_com.h"
+#include "hal_com_h2c.h"
+#include "hal_com_led.h"
 #include "../hal/hal_dm.h"
-#include <rtw_qos.h>
-#include <rtw_pwrctrl.h>
+#include "rtw_qos.h"
+#include "rtw_pwrctrl.h"
 #ifdef CONFIG_RTW_80211R
-#include <rtw_ft.h>
+#include "rtw_ft.h"
 #endif
 #if defined(CONFIG_RTW_WNM) || defined(CONFIG_RTW_80211K)
-#include <rtw_wnm.h>
+#include "rtw_wnm.h"
 #endif
 #ifdef CONFIG_RTW_MBO
-#include <rtw_mbo.h>
+#include "rtw_mbo.h"
 #endif
-#include <rtw_mlme.h>
-#include <mlme_osdep.h>
-#include <rtw_io.h>
-#include <rtw_ioctl.h>
-#include <rtw_ioctl_set.h>
-#include <rtw_ioctl_query.h>
-#include <osdep_intf.h>
-#include <rtw_eeprom.h>
-#include <sta_info.h>
-#include <rtw_event.h>
-#include <rtw_mlme_ext.h>
-#include <rtw_mi.h>
-#include <rtw_ap.h>
+#include "rtw_mlme.h"
+#include "mlme_osdep.h"
+#include "rtw_io.h"
+#include "rtw_ioctl.h"
+#include "rtw_ioctl_set.h"
+#include "rtw_ioctl_query.h"
+#include "osdep_intf.h"
+#include "rtw_eeprom.h"
+#include "sta_info.h"
+#include "rtw_event.h"
+#include "rtw_mlme_ext.h"
+#include "rtw_mi.h"
+#include "rtw_ap.h"
 #ifdef CONFIG_RTW_WDS
 #include "../core/wds/rtw_wds.h"
 #endif
@@ -123,55 +123,55 @@ typedef struct _ADAPTER _adapter, ADAPTER, *PADAPTER;
 #ifdef CONFIG_WIFI_MONITOR
 #include "../core/monitor/rtw_radiotap.h"
 #endif
-#include <rtw_efuse.h>
-#include <rtw_version.h>
-#include <rtw_odm.h>
+#include "rtw_efuse.h"
+#include "rtw_version.h"
+#include "rtw_odm.h"
 
 #ifdef CONFIG_PREALLOC_RX_SKB_BUFFER
-	#include <rtw_mem.h>
+	#include "rtw_mem.h"
 #endif
 
-#include <rtw_p2p.h>
+#include "rtw_p2p.h"
 
 #ifdef CONFIG_TDLS
-	#include <rtw_tdls.h>
+	#include "rtw_tdls.h"
 #endif /* CONFIG_TDLS */
 
 #ifdef CONFIG_WAPI_SUPPORT
-	#include <rtw_wapi.h>
+	#include "rtw_wapi.h"
 #endif /* CONFIG_WAPI_SUPPORT */
 
 #ifdef CONFIG_MP_INCLUDED
-	#include <rtw_mp.h>
+	#include "rtw_mp.h"
 #endif /* CONFIG_MP_INCLUDED */
 
 #ifdef CONFIG_BR_EXT
-	#include <rtw_br_ext.h>
+	#include "rtw_br_ext.h"
 #endif /* CONFIG_BR_EXT */
 
 #ifdef CONFIG_IOL
-	#include <rtw_iol.h>
+	#include "rtw_iol.h"
 #endif /* CONFIG_IOL */
 
-#include <ip.h>
-#include <if_ether.h>
-#include <ethernet.h>
-#include <circ_buf.h>
+#include "ip.h"
+#include "if_ether.h"
+#include "ethernet.h"
+#include "circ_buf.h"
 
-#include <rtw_android.h>
+#include "rtw_android.h"
 
-#include <rtw_btcoex_wifionly.h>
-#include <rtw_btcoex.h>
+#include "rtw_btcoex_wifionly.h"
+#include "rtw_btcoex.h"
 
 #ifdef CONFIG_MCC_MODE
-	#include <rtw_mcc.h>
+	#include "rtw_mcc.h"
 #endif /*CONFIG_MCC_MODE */
 
 #ifdef CONFIG_RTW_REPEATER_SON
-	#include <rtw_rson.h>
+	#include "rtw_rson.h"
 #endif /*CONFIG_RTW_REPEATER_SON */
 
-#include <rtw_roch.h>
+#include "rtw_roch.h"
 
 #define SPEC_DEV_ID_NONE BIT(0)
 #define SPEC_DEV_ID_DISABLE_HT BIT(1)
@@ -619,14 +619,14 @@ typedef struct rtw_if_operations {
 } RTW_IF_OPS, *PRTW_IF_OPS;
 
 #ifdef CONFIG_SDIO_HCI
-	#include <drv_types_sdio.h>
+	#include "drv_types_sdio.h"
 	#define INTF_DATA	SDIO_DATA
 	#define INTF_OPS	PRTW_IF_OPS
 #elif defined(CONFIG_GSPI_HCI)
-	#include <drv_types_gspi.h>
+	#include "drv_types_gspi.h"
 	#define INTF_DATA GSPI_DATA
 #elif defined(CONFIG_PCI_HCI)
-	#include <drv_types_pci.h>
+	#include "drv_types_pci.h"
 #endif
 
 #define get_hw_port(adapter) (adapter->hw_port)
@@ -2023,27 +2023,27 @@ int rtw_suspend_free_assoc_resource(_adapter *padapter);
 
 /* HCI Related header file */
 #ifdef CONFIG_USB_HCI
-	#include <usb_osintf.h>
-	#include <usb_ops.h>
-	#include <usb_hal.h>
+	#include "usb_osintf.h"
+	#include "usb_ops.h"
+	#include "usb_hal.h"
 #endif
 
 #ifdef CONFIG_SDIO_HCI
-	#include <sdio_osintf.h>
-	#include <sdio_ops.h>
-	#include <sdio_hal.h>
+	#include "sdio_osintf.h"
+	#include "sdio_ops.h"
+	#include "sdio_hal.h"
 #endif
 
 #ifdef CONFIG_GSPI_HCI
-	#include <gspi_osintf.h>
-	#include <gspi_ops.h>
-	#include <gspi_hal.h>
+	#include "gspi_osintf.h"
+	#include "gspi_ops.h"
+	#include "gspi_hal.h"
 #endif
 
 #ifdef CONFIG_PCI_HCI
-	#include <pci_osintf.h>
-	#include <pci_ops.h>
-	#include <pci_hal.h>
+	#include "pci_osintf.h"
+	#include "pci_ops.h"
+	#include "pci_hal.h"
 #endif
 
 #endif /* __DRV_TYPES_H__ */

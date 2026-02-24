@@ -13,8 +13,8 @@
  *
  *****************************************************************************/
 
-#include <rtw_odm.h>
-#include <hal_data.h>
+#include "rtw_odm.h"
+#include "hal_data.h"
 
 u32 rtw_phydm_ability_ops(_adapter *adapter, HAL_PHYDM_OPS ops, u32 ability)
 {

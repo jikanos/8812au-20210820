@@ -14,8 +14,8 @@
  *****************************************************************************/
 #define _RTW_WLAN_UTIL_C_
 
-#include <drv_types.h>
-#include <hal_data.h>
+#include "drv_types.h"
+#include "hal_data.h"
 
 #if defined(CONFIG_WOWLAN) || defined(CONFIG_AP_WOWLAN)
 	#include <linux/inetdevice.h>

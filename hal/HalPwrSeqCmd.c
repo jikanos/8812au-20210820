@@ -28,7 +28,7 @@ Major Change History:
 	2011-07-07 Roger            Create.
 
 --*/
-#include <HalPwrSeqCmd.h>
+#include "HalPwrSeqCmd.h"
 
 
 /*

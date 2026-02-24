@@ -14,10 +14,10 @@
  *****************************************************************************/
 #define _HCI_INTF_C_
 
-#include <drv_types.h>
-#include <hal_data.h>
+#include "drv_types.h"
+#include "hal_data.h"
 
-#include <platform_ops.h>
+#include "platform_ops.h"
 
 #ifndef CONFIG_USB_HCI
 #error "CONFIG_USB_HCI shall be on!\n"

@@ -16,8 +16,8 @@
 
 #include <linux/unistd.h>
 #include <linux/etherdevice.h>
-#include <drv_types.h>
-#include <rtw_wapi.h>
+#include "drv_types.h"
+#include "rtw_wapi.h"
 
 
 #ifdef CONFIG_WAPI_SW_SMS4

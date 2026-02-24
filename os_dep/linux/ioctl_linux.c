@@ -14,8 +14,8 @@
  *****************************************************************************/
 #define _IOCTL_LINUX_C_
 
-#include <drv_types.h>
-#include <rtw_mp.h>
+#include "drv_types.h"
+#include "rtw_mp.h"
 #include "../../hal/phydm/phydm_precomp.h"
 #ifdef RTW_HALMAC
 #include "../../hal/hal_halmac.h"
@@ -5757,7 +5757,7 @@ static int rtw_cta_test_start(struct net_device *dev,
 #endif
 
 #ifdef CONFIG_IOL
-#include <rtw_iol.h>
+#include "rtw_iol.h"
 #endif
 #ifdef CONFIG_BACKGROUND_NOISE_MONITOR
 #include "../../hal/hal_dm_acs.h"
@@ -11438,7 +11438,7 @@ static int rtw_tdls_get(struct net_device *dev,
 #ifdef CONFIG_MAC_LOOPBACK_DRIVER
 
 #if defined(CONFIG_RTL8188E)
-#include <rtl8188e_hal.h>
+#include "rtl8188e_hal.h"
 extern void rtl8188e_cal_txdesc_chksum(struct tx_desc *ptxdesc);
 #define cal_txdesc_chksum(padapter, desc) rtl8188e_cal_txdesc_chksum(desc)
 #ifdef CONFIG_SDIO_HCI || defined(CONFIG_GSPI_HCI)

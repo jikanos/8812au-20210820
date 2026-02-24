@@ -14,14 +14,14 @@
  *****************************************************************************/
 #if defined(CONFIG_MP_INCLUDED)
 
-#include <drv_types.h>
-#include <rtw_mp.h>
+#include "drv_types.h"
+#include "rtw_mp.h"
 #include "../../hal/phydm/phydm_precomp.h"
 #include <linux/ctype.h>
 
 
 #if defined(CONFIG_RTL8723B)
-	#include <rtw_bt_mp.h>
+	#include "rtw_bt_mp.h"
 #endif
 
 #define RTW_IWD_MAX_LEN	128

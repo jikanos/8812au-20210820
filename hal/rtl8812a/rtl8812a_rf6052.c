@@ -15,7 +15,7 @@
 #define _RTL8812A_RF6052_C_
 
 /* #include <drv_types.h> */
-#include <rtl8812a_hal.h>
+#include "rtl8812a_hal.h"
 
 
 /*-----------------------------------------------------------------------------

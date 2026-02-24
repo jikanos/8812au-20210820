@@ -15,8 +15,8 @@
 #define _RTW_HWMP_C_
 
 #ifdef CONFIG_RTW_MESH
-#include <drv_types.h>
-#include <hal_data.h>
+#include "drv_types.h"
+#include "hal_data.h"
 
 #define RTW_TEST_FRAME_LEN	8192
 #define RTW_MAX_METRIC	0xffffffff

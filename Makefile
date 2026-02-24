@@ -1,4 +1,11 @@
 EXTRA_CFLAGS += $(USER_EXTRA_CFLAGS)
+
+# Kbuild (recommended): make local driver headers visible
+ccflags-y += -iquote $(src)/include
+subdir-ccflags-y += -iquote $(src)/include
+
+# Legacy (keep too, harmless)
+
 EXTRA_CFLAGS += -O1
 #EXTRA_CFLAGS += -O2 -std=gnu11 -Wno-declaration-after-statement
 #EXTRA_CFLAGS += -O3
@@ -48,7 +55,6 @@ ifeq ($(GCC_VER_49),1)
 EXTRA_CFLAGS += -Wno-date-time	# Fix compile error && warning on gcc 4.9 and later
 endif
 
-EXTRA_CFLAGS += -I$(src)/include
 
 EXTRA_LDFLAGS += --strip-debug
 

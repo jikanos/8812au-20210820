@@ -19,15 +19,15 @@
 
 #include "../hal/phydm/phydm_precomp.h"
 #ifdef CONFIG_BT_COEXIST
-	#include <hal_btcoex.h>
+	#include "hal_btcoex.h"
 #endif
-	#include <hal_btcoex_wifionly.h>
+	#include "hal_btcoex_wifionly.h"
 
 #ifdef CONFIG_SDIO_HCI
-	#include <hal_sdio.h>
+	#include "hal_sdio.h"
 #endif
 #ifdef CONFIG_GSPI_HCI
-	#include <hal_gspi.h>
+	#include "hal_gspi.h"
 #endif
 
 #if defined(CONFIG_RTW_ACS) || defined(CONFIG_BACKGROUND_NOISE_MONITOR)

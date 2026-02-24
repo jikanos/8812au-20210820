@@ -14,8 +14,8 @@
  *****************************************************************************/
 #define _RTW_IOCTL_SET_C_
 
-#include <drv_types.h>
-#include <hal_data.h>
+#include "drv_types.h"
+#include "hal_data.h"
 
 
 extern void indicate_wx_scan_complete_event(_adapter *padapter);

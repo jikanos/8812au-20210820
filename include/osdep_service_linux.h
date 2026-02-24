@@ -51,6 +51,15 @@
 #include <linux/rtnetlink.h>
 #include <linux/delay.h>
 #include <linux/interrupt.h>	/* for struct tasklet_struct */
+#include <linux/timer.h>
+#ifndef __RTW_DEL_TIMER_SYNC_DECLARED__
+#define __RTW_DEL_TIMER_SYNC_DECLARED__
+extern int del_timer_sync(struct timer_list *timer);
+#endif
+#ifndef __RTW_DEL_TIMER_DECLARED__
+#define __RTW_DEL_TIMER_DECLARED__
+extern int del_timer(struct timer_list *timer);
+#endif
 #include <linux/ip.h>
 #include <linux/kthread.h>
 #include <linux/list.h>
@@ -350,6 +359,11 @@ __inline static _list	*get_list_head(_queue	*queue)
 {
 	return &(queue->queue);
 }
+
+#ifndef from_timer
+#define from_timer(var, callback_timer, timer_fieldname) \
+	container_of(callback_timer, typeof(*var), timer_fieldname)
+#endif
 
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(4, 14, 0))
 static inline void timer_hdl(struct timer_list *in_timer)

@@ -16,7 +16,7 @@
 /* #include "Mp_Precomp.h" */
 /* #include "../odm_precomp.h" */
 
-#include <drv_types.h>
+#include "drv_types.h"
 
 #include "HalEfuseMask8821A_USB.h"
 

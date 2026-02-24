@@ -16,7 +16,7 @@
 
 #define _OSDEP_SERVICE_C_
 
-#include <drv_types.h>
+#include "drv_types.h"
 
 #define RT_TAG	'1178'
 

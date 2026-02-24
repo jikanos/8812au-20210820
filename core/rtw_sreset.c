@@ -13,9 +13,9 @@
  *
  *****************************************************************************/
 
-#include <drv_types.h>
-#include <hal_data.h>
-#include <rtw_sreset.h>
+#include "drv_types.h"
+#include "hal_data.h"
+#include "rtw_sreset.h"
 
 void sreset_init_value(_adapter *padapter)
 {

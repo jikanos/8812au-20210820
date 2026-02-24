@@ -15,8 +15,8 @@
 #ifndef __DRV_TYPES_CE_H__
 #define __DRV_TYPES_CE_H__
 
-#include <drv_conf.h>
-#include <osdep_service.h>
+#include "drv_conf.h"
+#include "osdep_service.h"
 
 #include <Sdcardddk.h>
 

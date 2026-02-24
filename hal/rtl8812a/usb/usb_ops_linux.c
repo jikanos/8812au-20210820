@@ -15,7 +15,7 @@
 #define _HCI_OPS_OS_C_
 
 /* #include <drv_types.h> */
-#include <rtl8812a_hal.h>
+#include "rtl8812a_hal.h"
 
 #ifdef CONFIG_SUPPORT_USB_INT
 void interrupt_handler_8812au(_adapter *padapter, u16 pkt_len, u8 *pbuf)

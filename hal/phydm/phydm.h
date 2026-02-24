@@ -30,7 +30,10 @@
 /*@include files*/
 /*@============================================================*/
 /*PHYDM header*/
+#include <linux/timer.h>
+#include "../../include/cmn_info/rtw_bb_path.h"
 #include "phydm_pre_define.h"
+#include "phydm_types.h"
 #include "phydm_features.h"
 #include "phydm_dig.h"
 #ifdef CONFIG_PATH_DIVERSITY

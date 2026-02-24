@@ -15,12 +15,12 @@
 #ifndef __RTL8821A_SPEC_H__
 #define __RTL8821A_SPEC_H__
 
-#include <drv_conf.h>
+#include "drv_conf.h"
 /* This file should based on "hal_com_reg.h" */
-#include <hal_com_reg.h>
+#include "hal_com_reg.h"
 /* Because 8812a and 8821a is the same serial,
  * most of 8821a register definitions are the same as 8812a. */
-#include <rtl8812a_spec.h>
+#include "rtl8812a_spec.h"
 
 
 /* ************************************************************

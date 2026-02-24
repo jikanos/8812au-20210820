@@ -15,7 +15,7 @@
 #define _RTL8812AU_XMIT_C_
 
 /* #include <drv_types.h> */
-#include <rtl8812a_hal.h>
+#include "rtl8812a_hal.h"
 
 
 s32	rtl8812au_init_xmit_priv(_adapter *padapter)
