@@ -52,7 +52,7 @@
 	#include "halrf/rtl8814b/halrf_txgapk_8814b.h"
 #endif
 
-#include "halrf/halrf_powertracking_ce.h"
+#include "halrf_powertracking_ce.h"
 
 enum spur_cal_method {
 	PLL_RESET,
