@@ -16,6 +16,19 @@
 
 #include "drv_types.h"
 #include "hal_data.h"
+/* MAX_RECVBUF_SZ is chipset-specific; ensure it is visible in this TU */
+#if !defined(MAX_RECVBUF_SZ) && (defined(CONFIG_RTL8812A) || defined(CONFIG_RTL8821A))
+#include "rtl8812a_recv.h"
+#endif
+
+/*
+ * Fallback definition for MAX_RECVBUF_SZ.
+ * Normally defined in rtl8812a_recv.h under CONFIG_USB_HCI,
+ * but include-chain is not guaranteed in DKMS builds.
+ */
+#ifndef MAX_RECVBUF_SZ
+#define MAX_RECVBUF_SZ (32768)
+#endif
 
 int	usb_init_recv_priv(_adapter *padapter, u16 ini_in_buf_sz)
 {

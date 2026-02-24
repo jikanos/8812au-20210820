@@ -173,6 +173,16 @@ typedef struct _ADAPTER _adapter, ADAPTER, *PADAPTER;
 
 #include "rtw_roch.h"
 
+/*
+ * Ensure MAX_RECVBUF_SZ is always visible for 8812/8821 USB builds.
+ * The macro is defined in rtl8812a_recv.h but not all TU include it.
+ */
+#if (defined(CONFIG_RTL8812A) || defined(CONFIG_RTL8821A)) && \
+    defined(CONFIG_USB_HCI) && \
+    !defined(MAX_RECVBUF_SZ)
+#include "rtl8812a_recv.h"
+#endif
+
 #define SPEC_DEV_ID_NONE BIT(0)
 #define SPEC_DEV_ID_DISABLE_HT BIT(1)
 #define SPEC_DEV_ID_ENABLE_PS BIT(2)

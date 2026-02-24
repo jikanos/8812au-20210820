@@ -253,6 +253,7 @@ endif
 
 ifeq ($(CONFIG_USB_HCI), y)
 HCI_NAME = usb
+EXTRA_CFLAGS += -DCONFIG_USB_HCI
 endif
 
 ifeq ($(CONFIG_PCI_HCI), y)
