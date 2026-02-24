@@ -855,7 +855,7 @@ u8	rtw_hal_intf_ps_func(_adapter *padapter, HAL_INTF_PS_FUNC efunc_id, u8 *val)
 	return _FAIL;
 }
 
-#ifdef CONFIG_RTW_MGMT_QUEUE
+#if defined(CONFIG_RTW_MGMT_QUEUE) && (defined(CONFIG_AP_MODE) || defined(CONFIG_TDLS))
 s32	rtw_hal_mgmt_xmitframe_enqueue(_adapter *padapter, struct xmit_frame *pxmitframe)
 {
 	return padapter->hal_func.hal_mgmt_xmitframe_enqueue(padapter, pxmitframe);
@@ -900,7 +900,9 @@ s32	rtw_hal_mgnt_xmit(_adapter *padapter, struct xmit_frame *pmgntframe)
 #ifdef CONFIG_RTW_MGMT_QUEUE
 	if (MLME_IS_AP(padapter) || MLME_IS_MESH(padapter)) {
 		_enter_critical_bh(&pxmitpriv->lock, &irqL);
+#if defined(CONFIG_RTW_MGMT_QUEUE) && (defined(CONFIG_AP_MODE) || defined(CONFIG_TDLS))
 		ret = mgmt_xmitframe_enqueue_for_sleeping_sta(padapter, pmgntframe);
+#endif
 		_exit_critical_bh(&pxmitpriv->lock, &irqL);
 
 		#ifdef DBG_MGMT_QUEUE
