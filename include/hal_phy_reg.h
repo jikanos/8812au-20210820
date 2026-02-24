@@ -15,6 +15,10 @@
 #ifndef __HAL_PHY_REG_H__
 #define __HAL_PHY_REG_H__
 
+#if defined(CONFIG_RTL8812A)
+#include "Hal8812PhyReg.h"
+#endif
+
 /* for PutRFRegsetting & GetRFRegSetting BitMask*/
 #define		bRFRegOffsetMask	0xfffff
 

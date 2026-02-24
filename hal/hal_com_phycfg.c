@@ -1750,7 +1750,7 @@ PHY_GetRateValuesOfTxPowerByRate(
 		get_val = get_val_from_hex;
 
 	switch (RegAddr) {
-	case rTxAGC_A_Rate18_06:
+	case REG_TX_AGC_A_RATE18_06:
 	case rTxAGC_B_Rate18_06:
 		Rate[0] = MGN_6M;
 		Rate[1] = MGN_9M;

@@ -1910,10 +1910,14 @@ struct _ADAPTER {
 #define adapter_to_regsty(adapter) dvobj_to_regsty(adapter_to_dvobj((adapter)))
 #define adapter_to_pwrctl(adapter) dvobj_to_pwrctl(adapter_to_dvobj((adapter)))
 #define adapter_wdev_data(adapter) (&((adapter)->wdev_data))
-#if defined(RTW_SINGLE_WIPHY)
-#define adapter_to_wiphy(adapter) dvobj_to_wiphy(adapter_to_dvobj(adapter))
+#if defined(CONFIG_IOCTL_CFG80211)
+  #if defined(RTW_SINGLE_WIPHY)
+    #define adapter_to_wiphy(adapter) dvobj_to_wiphy(adapter_to_dvobj(adapter))
+  #else
+    #define adapter_to_wiphy(adapter) ((adapter)->wiphy)
+  #endif
 #else
-#define adapter_to_wiphy(adapter) ((adapter)->wiphy)
+  #define adapter_to_wiphy(adapter) (NULL)
 #endif
 
 #define adapter_to_rfctl(adapter) dvobj_to_rfctl(adapter_to_dvobj((adapter)))

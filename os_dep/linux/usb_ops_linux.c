@@ -17,6 +17,9 @@
 #include "drv_types.h"
 #include "hal_data.h"
 #include "rtw_sreset.h"
+#if defined(CONFIG_USB_HCI) && !defined(MAX_RECVBUF_SZ)
+#include "rtl8812a_recv.h"
+#endif
 
 struct rtw_async_write_data {
 	u8 data[VENDOR_CMD_MAX_DATA_LEN];
