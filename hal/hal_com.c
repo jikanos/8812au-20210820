@@ -18,6 +18,7 @@
 #include "hal_com_h2c.h"
 
 #include "hal_data.h"
+#include "hal_phy_reg.h"
 
 #ifdef RTW_HALMAC
 #include "../../hal/hal_halmac.h"

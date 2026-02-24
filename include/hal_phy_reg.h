@@ -15,7 +15,7 @@
 #ifndef __HAL_PHY_REG_H__
 #define __HAL_PHY_REG_H__
 
-#if defined(CONFIG_RTL8812A)
+#if defined(CONFIG_RTL8812A) || defined(CONFIG_RTL8812AU)
 #include "Hal8812PhyReg.h"
 #endif
 

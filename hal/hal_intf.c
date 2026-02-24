@@ -898,11 +898,10 @@ s32	rtw_hal_mgnt_xmit(_adapter *padapter, struct xmit_frame *pmgntframe)
 #endif
 
 #ifdef CONFIG_RTW_MGMT_QUEUE
+#if defined(CONFIG_AP_MODE) || defined(CONFIG_TDLS)
 	if (MLME_IS_AP(padapter) || MLME_IS_MESH(padapter)) {
 		_enter_critical_bh(&pxmitpriv->lock, &irqL);
-#if defined(CONFIG_RTW_MGMT_QUEUE) && (defined(CONFIG_AP_MODE) || defined(CONFIG_TDLS))
 		ret = mgmt_xmitframe_enqueue_for_sleeping_sta(padapter, pmgntframe);
-#endif
 		_exit_critical_bh(&pxmitpriv->lock, &irqL);
 
 		#ifdef DBG_MGMT_QUEUE
@@ -914,6 +913,7 @@ s32	rtw_hal_mgnt_xmit(_adapter *padapter, struct xmit_frame *pmgntframe)
 		if (ret == RTW_QUEUE_MGMT)
 			return ret;
 	}
+#endif /* CONFIG_AP_MODE || CONFIG_TDLS */
 #endif
 
 	ret = padapter->hal_func.mgnt_xmit(padapter, pmgntframe);
