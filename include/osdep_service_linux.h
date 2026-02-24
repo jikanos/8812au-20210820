@@ -52,14 +52,6 @@
 #include <linux/delay.h>
 #include <linux/interrupt.h>	/* for struct tasklet_struct */
 #include <linux/timer.h>
-#ifndef __RTW_DEL_TIMER_SYNC_DECLARED__
-#define __RTW_DEL_TIMER_SYNC_DECLARED__
-extern int del_timer_sync(struct timer_list *timer);
-#endif
-#ifndef __RTW_DEL_TIMER_DECLARED__
-#define __RTW_DEL_TIMER_DECLARED__
-extern int del_timer(struct timer_list *timer);
-#endif
 #include <linux/ip.h>
 #include <linux/kthread.h>
 #include <linux/list.h>
@@ -401,12 +393,20 @@ __inline static void _set_timer(_timer *ptimer, u32 delay_time)
 
 __inline static void _cancel_timer(_timer *ptimer, u8 *bcancelled)
 {
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(6, 17, 0))
+	*bcancelled = timer_delete_sync(&ptimer->timer) ? 1 : 0;
+#else
 	*bcancelled = del_timer_sync(&ptimer->timer) == 1 ? 1 : 0;
+#endif
 }
 
 __inline static void _cancel_timer_async(_timer *ptimer)
 {
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(6, 17, 0))
+	timer_delete(&ptimer->timer);
+#else
 	del_timer(&ptimer->timer);
+#endif
 }
 
 static inline void _init_workitem(_workitem *pwork, void *pfunc, void *cntx)
