@@ -19,6 +19,7 @@
 
 #include "hal_data.h"
 #include "hal_phy_reg.h"
+#include "rtw_mp_phy_regdef.h"
 
 #ifdef RTW_HALMAC
 #include "../../hal/hal_halmac.h"

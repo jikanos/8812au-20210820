@@ -18,6 +18,9 @@
 #if defined(CONFIG_RTL8812A) || defined(CONFIG_RTL8812AU)
 #include "Hal8812PhyReg.h"
 #endif
+#ifndef rTxAGC_A_Rate18_06
+#include "Hal8812PhyReg.h"
+#endif
 
 /* for PutRFRegsetting & GetRFRegSetting BitMask*/
 #define		bRFRegOffsetMask	0xfffff
