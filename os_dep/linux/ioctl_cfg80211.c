@@ -10442,6 +10442,32 @@ void rtw_cfg80211_external_auth_status(struct wiphy *wiphy, struct net_device *d
 	}
 }
 
+static int cfg80211_rtw_set_wiphy_params_k617(struct wiphy *wiphy, int arg, u32 val)
+{
+	(void)arg; /* unused in this driver */
+	return cfg80211_rtw_set_wiphy_params(wiphy, val);
+}
+
+static int cfg80211_rtw_set_txpower_k617(struct wiphy *wiphy,
+					struct wireless_dev *wdev,
+					int link_id,
+					enum nl80211_tx_power_setting type,
+					int mbm)
+{
+	(void)link_id; /* unused in this driver */
+	return cfg80211_rtw_set_txpower(wiphy, wdev, type, mbm);
+}
+
+static int cfg80211_rtw_get_txpower_k617(struct wiphy *wiphy,
+					struct wireless_dev *wdev,
+					int arg,
+					unsigned int link_id,
+					int *dbm)
+{
+	(void)arg;
+	return cfg80211_rtw_get_txpower(wiphy, wdev, link_id, dbm);
+}
+
 static struct cfg80211_ops rtw_cfg80211_ops = {
 	.change_virtual_intf = cfg80211_rtw_change_iface,
 	.add_key = cfg80211_rtw_add_key,
@@ -10460,14 +10486,14 @@ static struct cfg80211_ops rtw_cfg80211_ops = {
     defined(CONFIG_RTW_ABORT_SCAN)
 	.abort_scan = cfg80211_rtw_abort_scan,
 #endif
-	.set_wiphy_params = cfg80211_rtw_set_wiphy_params,
+	.set_wiphy_params = cfg80211_rtw_set_wiphy_params_k617,
 	.connect = cfg80211_rtw_connect,
 	.disconnect = cfg80211_rtw_disconnect,
 	.join_ibss = cfg80211_rtw_join_ibss,
 	.leave_ibss = cfg80211_rtw_leave_ibss,
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(2, 6, 31))
-	.set_tx_power = cfg80211_rtw_set_txpower,
-	.get_tx_power = cfg80211_rtw_get_txpower,
+	.set_tx_power = cfg80211_rtw_set_txpower_k617,
+	.get_tx_power = cfg80211_rtw_get_txpower_k617,
 #endif
 	.set_power_mgmt = cfg80211_rtw_set_power_mgmt,
 	.set_pmksa = cfg80211_rtw_set_pmksa,

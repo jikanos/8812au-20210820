@@ -23,10 +23,22 @@
 
 #if defined(CONFIG_LITTLE_ENDIAN)
 	#ifndef CONFIG_PLATFORM_MSTAR389
-		#include <byteorder/little_endian.h>
+		#if __has_include(<linux/byteorder/little_endian.h>)
+		#include <linux/byteorder/little_endian.h>
+		#elif __has_include(<asm/byteorder.h>)
+		#include <asm/byteorder.h>
+		#else
+		#include <linux/byteorder/generic.h>
+		#endif
 	#endif
 #elif defined (CONFIG_BIG_ENDIAN)
-	#include <byteorder/big_endian.h>
+	#if __has_include(<linux/byteorder/big_endian.h>)
+	#include <linux/byteorder/big_endian.h>
+	#elif __has_include(<asm/byteorder.h>)
+	#include <asm/byteorder.h>
+	#else
+	#include <linux/byteorder/generic.h>
+	#endif
 #else
 	#if defined(__BYTE_ORDER) && defined(__LITTLE_ENDIAN) && defined(__BIG_ENDIAN)
 		#if __BYTE_ORDER == __LITTLE_ENDIAN
